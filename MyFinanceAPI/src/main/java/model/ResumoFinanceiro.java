@@ -2,7 +2,7 @@ package model;
 
 import java.util.Map;
 
-public class ResumoF {
+public class ResumoFinanceiro {
 	
 	private double totalReceitas;
     private double totalDespesas;
@@ -10,9 +10,9 @@ public class ResumoF {
     private Map<String, Double> despesasPorCategoria;
     private Map<String, Double> receitasPorCategoria;
 	
-    public ResumoF() {}
+    public ResumoFinanceiro() {}
     
-    public ResumoF(double totalReceitas, 
+    public ResumoFinanceiro(double totalReceitas, 
     		double totalDespesas, 
     		double saldoAtual,
 			Map<String, Double> despesasPorCategoria, 

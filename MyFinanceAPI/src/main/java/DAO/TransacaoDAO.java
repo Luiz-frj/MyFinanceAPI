@@ -16,7 +16,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import model.ResumoF;
+import model.ResumoFinanceiro;
 import model.Transacao;
 
 public class TransacaoDAO {
@@ -171,8 +171,8 @@ public class TransacaoDAO {
 		}
 	}
 	
-	public ResumoF obterResumo() throws Exception{
-		ResumoF resumo = new ResumoF();
+	public ResumoFinanceiro obterResumo() throws Exception{
+		ResumoFinanceiro resumo = new ResumoFinanceiro();
 		
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
