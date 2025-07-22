@@ -1,7 +1,6 @@
 package controller.chain;
 
 import controller.command.DeletarTransacaoCommand;
-import controller.command.ListarTransacoesCommand;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
