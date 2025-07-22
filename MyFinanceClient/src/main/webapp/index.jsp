@@ -7,21 +7,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 	<style>
-  		.receita {
-    		color: green;
-    		font-weight: bold;
+  		tr.receita {
+    		background-color: #d4edda; /* verde claro */
+    		color: #155724;
   		}
 
-  		.despesa {
-    		color: red;
-    		font-weight: bold;
-  		}
+  		tr.despesa {
+    		background-color: #f8d7da; /* vermelho claro */
+    		color: #721c24;
+ 		 }
 	</style>
+
+
 	
 </head>
 <body>
-    <div class="container mt-4">
+    <div class="container mt-4" >
         <h1 id="titulo" class="mb-4 text-center text-primary">MyFinance Client</h1>
+        
+        <div class="text-center mb-4">
+    		<button class="btn btn-outline-primary m-1" onclick="mostrarSecao('secaoTransacoes')">Transações</button>
+    		<button class="btn btn-outline-success m-1" onclick="mostrarSecao('secaoAdicionar')">Adicionar</button>
+    		<button class="btn btn-outline-warning m-1" onclick="mostrarSecao('secaoEditar')">Editar</button>
+    		<button class="btn btn-outline-danger m-1" onclick="mostrarSecao('secaoDeletar')">Deletar</button>
+    		<button class="btn btn-outline-info m-1" onclick="mostrarSecao('secaoResumo')">Resumo</button>
+		</div>
         
         <div class="card p-3 mb-4 shadow-sm">
             <h4 class="card-title">Filtros: </h4>
@@ -58,7 +68,7 @@
             </div>
         </div>
         
-        <h2 class="mt-5 mb-3 text-primary">Todas as Transações</h2>
+        <h2 class="mt-5 mb-3 text-primary" id="secaoTransacoes">Todas as Transações</h2>
         <div id="transactionsOutput" class="table-responsive">
             <table id="transactionsTable" class="table table-striped table-hover table-bordered">
                 <thead class="table-dark">
@@ -69,8 +79,8 @@
                         <th>Tipo</th>
                         <th>Categoria</th>
                         <th>Data Criação</th>
-                        <th>Ação 1</th>
-                        <th>Ação 2</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="transactionsTableBody">
@@ -85,7 +95,7 @@
         
         <hr class="my-5">
     
-        <div class="card p-3 mb-4 shadow-sm">
+        <div class="card p-3 mb-4 shadow-sm" id="secaoAdicionar">
             <h2 class="card-title text-primary">Adicionar Nova Transação</h2>
             <div class="mb-3">
                 <label for="postDescription" class="form-label">Descrição:</label>
@@ -126,7 +136,7 @@
     
         <hr class="my-5">
     
-        <div class="card p-3 mb-4 shadow-sm">
+        <div class="card p-3 mb-4 shadow-sm" id="secaoEditar">
 			<h2 id="editarTitulo" class="card-title text-primary">Editar
 				Transação</h2>
 			<div class="mb-3">
@@ -172,7 +182,7 @@
     
         <hr class="my-5">
     
-        <div class="card p-3 mb-4 shadow-sm">
+        <div class="card p-3 mb-4 shadow-sm" id="secaoDeletar">
             <h2 id="deletarTransacaoTitulo" class="card-title text-primary">Deletar Transação</h2>
             <div class="mb-3">
                 <label for="deleteId" class="form-label">ID da Transação:</label>
@@ -186,7 +196,7 @@
         
         <hr class="my-5">
         
-        <div class="card p-3 mb-4 shadow-sm">
+        <div class="card p-3 mb-4 shadow-sm" id="secaoResumo">
             <h2 class="card-title text-primary">Resumo Financeiro</h2>
             <p class="fs-5"><strong>Total Receitas:</strong> <span id="totalReceitas" class="text-success">R$ 0.00</span></p>
             <p class="fs-5"><strong>Total Despesas:</strong> <span id="totalDespesas" class="text-danger">R$ 0.00</span></p>

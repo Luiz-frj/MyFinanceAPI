@@ -5,6 +5,24 @@ function displayJson(elementId, data) {
 	outputElement.textContent = JSON.stringify(data, null, 2);
 }
 
+function esconderTodasSecoes() {
+    document.getElementById("secaoTransacoes").style.display = "none";
+    document.getElementById("secaoAdicionar").style.display = "none";
+    document.getElementById("secaoEditar").style.display = "none";
+    document.getElementById("secaoDeletar").style.display = "none";
+    document.getElementById("secaoResumo").style.display = "none";
+}
+
+function mostrarSecao(id) {
+    esconderTodasSecoes();
+    document.getElementById(id).style.display = "block";
+}
+
+window.onload = function () {
+    esconderTodasSecoes();
+    mostrarSecao("secaoTransacoes"); // seção padrão ao abrir
+}
+
 function displayTransactionsInTable(transactions) {
     const tableBody = document.getElementById('transactionsTableBody');
     tableBody.innerHTML = '';
@@ -13,10 +31,10 @@ function displayTransactionsInTable(transactions) {
         const row = tableBody.insertRow();
 
         if (transaction.tipo === 'despesa') {
-            row.style.backgroundColor = '#ffcccc';
-        } else if (transaction.tipo === 'receita') {
-            row.style.backgroundColor = '#ccffcc';
-        }
+    		row.classList.add('despesa');
+		} else if (transaction.tipo === 'receita') {
+    		row.classList.add('receita');
+		}
 
         row.insertCell().textContent = transaction.id;
         row.insertCell().textContent = transaction.descricao;
