@@ -34,7 +34,7 @@ Aplicação web para gerenciamento financeiro pessoal, permitindo cadastro, edi�
 
 ## Link do YouTube
 
-👉 [Insira aqui o link do vídeo](#)
+👉 [https://youtu.be/g4DypSzRPvc?si=StvksQZiE6nBf_vJ](#)
 
 ---
 
