@@ -45,5 +45,10 @@ Se quiser entrar em contato, mande uma mensagem para:
 
 ---
 
+## Retornos
+
+Os codigos de retorno estao dentro do index da API.
+Mas irei deixar um arquivo .html deles aqui na pagina de entrada.
+
 *Projeto desenvolvido como parte do curso de DSW2 no IFSP - Araraquara.*
 
